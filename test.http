@@ -1,3 +1,4 @@
+# Ajouter un réal
 POST http://localhost:3002/api/addReal
 Content-Type: application/json
 
@@ -8,15 +9,17 @@ Content-Type: application/json
 }
 
 ###
-
+# Afficher les réal
 GET http://localhost:3002/api/getReal
 
 ###
 
+# Afficher 1 réal
 GET http://localhost:3002/api/getReal/661feb5fc15cc665942689d9
 
 ###
 
+# Modifier un réal
 PUT http://localhost:3002/api/modifReal/661feb5fc15cc665942689d9
 Content-Type: application/json
 
@@ -25,3 +28,48 @@ Content-Type: application/json
     "birthDate": "1946-12-18",
     "biography": "Steven Allan Spielberg est un réalisateur, scénariste et producteur américain de cinéma. Il est né le 18 décembre 1946 à Cincinnati (Ohio)."
 }
+
+###
+
+# Supprimer un réal
+DELETE http://localhost:3002/api/deleteReal/661feb5fc15cc665942689d9
+
+###
+
+POST http://localhost:3002/api/addFilm
+Content-Type: application/json
+
+{
+    "title": "Jurassic Park 2",
+    "releaseYear": 2000,
+    "genre": "Science Fiction",
+    "directors": ["661fec8faf950d63efcd080a"]
+}
+
+###
+
+# Afficher les films
+GET http://localhost:3002/api/getFilms
+
+###
+
+# Afficher 1 film
+GET http://localhost:3002/api/getFilm/661ff9445857ce592b833662
+
+###
+
+# Modifier un film
+PUT http://localhost:3002/api/modifFilm/661ff9445857ce592b833662
+Content-Type: application/json
+
+{
+     "title": "Jurassic Park 42",
+    "releaseYear": 2050,
+    "genre": "Science Fiction",
+    "directors": ["661fec8faf950d63efcd080a"]
+}
+
+###
+
+# Supprimer un film
+DELETE http://localhost:3002/api/deleteFilm/661ff9445857ce592b833662
