@@ -36,6 +36,7 @@ DELETE http://localhost:3002/api/deleteReal/661feb5fc15cc665942689d9
 
 ###
 
+# Ajout un film
 POST http://localhost:3002/api/addFilm
 Content-Type: application/json
 
@@ -73,3 +74,43 @@ Content-Type: application/json
 
 # Supprimer un film
 DELETE http://localhost:3002/api/deleteFilm/661ff9445857ce592b833662
+
+###
+
+# Ajouter une séance
+POST http://localhost:3002/api/addSeance
+Content-Type: application/json
+
+{
+    "film": "661ff8b75857ce592b83365e",
+    "date": "2024-05-02",
+    "time": "20:00",
+    "availableSeats": 100
+}
+
+###
+
+# Afficher les séances
+GET http://localhost:3002/api/getSeances
+
+###
+
+# Afficher 1 séance
+GET http://localhost:3002/api/getSeance/6620057af24d6a978b95679c
+
+###
+
+# Modifier une séance
+PUT http://localhost:3002/api/modifSeance/66200657da68cac9584ff1aa
+Content-Type: application/json
+
+{
+    "date": "2024-05-01",
+    "time": "22:00",
+    "availableSeats": 100
+}
+
+###
+
+# Supprimer une séance
+DELETE http://localhost:3002/api/deleteSeance/6620057af24d6a978b95679c

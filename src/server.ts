@@ -2,6 +2,7 @@ import express, { Express } from 'express';
 import mongoose from 'mongoose';
 import realRoutes from './routes/realisateurRoutes';
 import filmRoutes from './routes/filmRoutes';
+import seanceRoute from './routes/seanceRoutes';
 
 
 const app: Express = express();
@@ -18,6 +19,7 @@ mongoose.connect(uri).then(() => {
 app.use(express.json());
 app.use('/api', realRoutes); 
 app.use('/api', filmRoutes);
+app.use('/api', seanceRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

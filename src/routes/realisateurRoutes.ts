@@ -71,7 +71,6 @@ router.delete('/deleteReal/:id', async (req, res) => {
             res.status(404).json({ message: "Réalisateur non trouvé." });
         }
     } catch (error) {
-        // En cas d'erreur, loggez l'erreur et répondez avec le statut HTTP 500 (Erreur de serveur interne) et un message d'erreur
         console.error("Erreur lors de la suppression du réalisateur par ID:", error);
         res.status(500).json({ message: "Erreur lors de la suppression du réalisateur par ID" });
     }
