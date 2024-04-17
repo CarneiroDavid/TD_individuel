@@ -1,0 +1,27 @@
+POST http://localhost:3002/api/addReal
+Content-Type: application/json
+
+{
+    "name": "Steven Spielberg",
+    "birthDate": "1946-12-18",
+    "biography": "Steven Allan Spielberg est un réalisateur, scénariste et producteur américain de cinéma. Il est né le 18 décembre 1946 à Cincinnati (Ohio)."
+}
+
+###
+
+GET http://localhost:3002/api/getReal
+
+###
+
+GET http://localhost:3002/api/getReal/661feb5fc15cc665942689d9
+
+###
+
+PUT http://localhost:3002/api/modifReal/661feb5fc15cc665942689d9
+Content-Type: application/json
+
+{
+    "name": "Steven Spielberggggg",
+    "birthDate": "1946-12-18",
+    "biography": "Steven Allan Spielberg est un réalisateur, scénariste et producteur américain de cinéma. Il est né le 18 décembre 1946 à Cincinnati (Ohio)."
+}
